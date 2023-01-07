@@ -1,137 +1,173 @@
 \documentclass{article}
 
-\usepackage{sectsty}
-\usepackage{enumitem}
-\usepackage{tabularx}
-\usepackage[letterpaper,margin=0.70in]{geometry}
+\usepackage{sectsty}      % for section heading
+
+\usepackage[ttscale=.875]{libertine} % font
+\usepackage[T1]{fontenc}  % for 8-bit encoding
+
+\usepackage{enumitem}     % for customizing itemize
+\usepackage{fontawesome5} % for contact info logos
+\usepackage{hyperref}     % for link
+\usepackage{mdwlist}      % for compact lists (itemize*)
+
+\usepackage[letterpaper,margin=1in]{geometry}
+
 
 \sectionfont{\normalfont\sectionrule{0pt}{0pt}{-4pt}{1pt}}
 
-% format two pieces of text, one left aligned and one right aligned
+% format two pieces of text: one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
     #1 &
     #2 \\
 \end{tabular*}}
 
+\newcommand{\email}[1]{
+    \faEnvelope \space #1
+}
+
+\newcommand{\phone}[1]{
+    \faPhone \space #1
+}
+
+\newcommand{\github}[1]{
+    \href{https://www.github.com/#1}{\faGithub \space #1}
+}
+
+\newcommand{\linkedin}[1]{
+    \href{https://www.linkedin.com/in/#1}{\faLinkedin \space #1}
+}
+
 \begin{document}
-\begin{center} {\Large \textsc{Rahul Venkatesh}}\end{center}
+\begin{center}
+    {\huge \textsc{\textbf{Rahul Venkatesh}}} \\[2pt]
+    % Paris $\mid$ \phone {+33 7 xx xx xx xx} $\mid$ \email{rahulv.9942@gmail.com}
+    \phone{+65 xxxx xxxx}
+    $\mid$
+    \email{rahulv.9942@gmail.com}
+    $\mid$
+    \linkedin{recurze}
+    $\mid$
+    \github{recurze}
+\end{center}
 
-\section*{Academic Details}
-\begin{center} \begin{tabular}{ | c | c | c | c |}
-    \hline
+\section*{\textsc{Education}}
+\begin{itemize}[leftmargin=0em]
 
-    \textbf{Year} &
-    \textbf{Degree} &
-    \textbf{Institute} &
-    \textbf{CGPA/Percentage} \\
+\item[]
+    \headerrow {\textbf{National University of Singapore}}{Singapore}
+    \headerrow {\emph{Master of Science in Data Science and Machine Learning}}{\emph{2023-Present}}
 
-    \hline
+\item[]
+    \headerrow {\textbf{Indian Institute of Technology (IIT), Delhi}}{New Delhi, India}
+    \headerrow {\emph{Bachelor of Technology in Computer Science and Engineering}}{\emph{2016-2020}}
 
-    2016-2020 &
-    B.Tech in Computer Science &
-    Indian Institute of Technology, Delhi &
-    7.370 \\
-
-    \hline
-
-    2016 &
-    Class XII,
-    Karnataka State &
-    Mother Teresa PU College, Mysuru &
-    92.1\% \\
-
-    \hline
-\end{tabular} \end{center}
-
-\section*{Scholastic Achievements}
-\begin{itemize}[noitemsep,nolistsep]
-    \item
-        Selected for \textbf{ACM-ICPC $2018$} Regional Round with teams
-        competing from all over India.
-    \item
-        Secured \textbf{All India Rank - $2754$} in Joint Entrance Exam
-        (Advanced) - $2016$, among $150$k candidates.
-    \item
-        Awarded Kishore Vaigyanik Protsahan Yojana \textbf{(KVYP) Fellowship} by
-        Indian Institute of Science, $2015$.
-    \item
-        Received National Talent Search \textbf{(NTS) Scholarship} for being
-        in the top 1000 at National Level, $2012$.
 \end{itemize}
 
-\section*{Work Experience}
-\begin{list} {\labelitemi}{\leftmargin=0em}
-\setlength{\leftmargin}{0pt}
+%\section*{Scholastic Achievements}
+%\begin{itemize}
+%    \item
+%        Selected for \textbf{ACM-ICPC $2018$} Regional Round with teams
+%        competing from all over India.
+%    \item
+%        Secured \textbf{All India Rank - $2754$} in Joint Entrance Exam
+%        (Advanced) - $2016$, among $150$k candidates.
+%    \item
+%        Awarded Kishore Vaigyanik Protsahan Yojana \textbf{(KVYP) Fellowship} by
+%        Indian Institute of Science, $2015$.
+%    \item
+%        Received National Talent Search \textbf{(NTS) Scholarship} for being
+%        in the top 1000 at National Level, $2012$.
+%\end{itemize}
+%
+
+\section*{\textsc{Technical Skills}}
+\begin{itemize}[itemsep=0em, leftmargin=0.7em]
 \item[]
-    \headerrow {\textbf{Order Entry Gateway}}{Squarepoint Capital - Paris}
-    \headerrow {\emph{Software Engineering Job}}{\emph{Aug 2020 - Present}}
+    \textbf{Languages}: C++, Python, SQL, Bash
+\item[]
+    \textbf{Tools/Software}: TensorFlow, OpenMP, CUDA, Git, GDB
+\end{itemize}
 
-    \begin{itemize}[noitemsep,nolistsep]
+\section*{\textsc{Work Experience}}
+\begin{itemize}[leftmargin=0em]
+\parskip=0.1em
+
+\item[]
+    \headerrow {\textbf{Squarepoint Capital}}{Paris, France}
+    \headerrow {\emph{Software Engineering}}{\emph{Aug 2020 - Jun 2023}}
+
+    \begin{itemize*}
         \item
-            Developed, tested, debugged and documented applications used for
-            algorithmic trading.
+            Developed and supported (in production) \textbf{low-latency} order entry gateways (OEG) for algorithmic trading.
         \item
-            Built new order entry gateways to various stock exchanges over different order entry protocols.
+            Built new OEGs to $5+$ \textbf{exchanges} including \textbf{CME, ICE} and \textbf{OSE}
+            over various protocols like OUCH and FIX.
         \item
-            Improved \textbf{performance} of the application by
+            Implemented frameworks for trading $2$ new asset classes:
+            \textbf{Bonds} and \textbf{Non-deliverable forwards (NDF)}.
+        \item
+            Coordinated with QA and delivered numerous new projects (gateways) and business requests (features).
+        \item
+            \textbf{Improved performance} of the gateway application by
             \textbf{collecting and analyzing} latency-related \textbf{data}.
-    \end{itemize}
+    \end{itemize*}
+\end{itemize}
 
-\end{list}
+\section*{\textsc{Projects}}
+\begin{itemize}[leftmargin=0em]
 
-\section*{Projects}
-\begin{list} {\labelitemi}{\leftmargin=0em}
-\setlength{\leftmargin}{0pt}
-\itemsep1em
 \item[]
     \headerrow {\textbf{Parallel Laplacian Solver}}{Prof. Amitabha Bagchi}
-    \headerrow {\emph{Algorithms Project}}{\emph{Aug 2019}}
+    \headerrow {\emph{Algorithms Project}}{\emph{Aug 2019 - Dec 2019}}
 
-    \begin{itemize}[noitemsep,nolistsep]
+    \begin{itemize*}
         \item
-            Implemented a \textbf{random-walk distributed} method to solve an
+            Implemented a novel \textbf{random-walk distributed} method to solve an
             important class of Laplacian Systems.
         \item
-            Experimented with various \textbf{optimizations} and used
-            \textbf{Alias Method} to successfully improve performance.
+            Leveraged C++/OpenMP API for parallelization, and \texttt{gprof} and \texttt{valgrind} for \textbf{profiling}.
         \item
-            Wrote and tested in C++; used OpenMP application programming
-            interface for parallelization.
-    \end{itemize}
+            Improved performance on sparse graphs with \textbf{optimizations} like Alias Method and "densifying".
+        \item
+            Visualized performance against existing solvers like Dan Spielman's and Bechetti's: \\
+            Overall, it's \textbf{better than} Bechetti's. With lot of parameter fine-tuning, it's \textbf{comparable with} Dan's.
+    \end{itemize*}
 
-\item[]
-    \headerrow {\textbf{Public Credit Registry}}{Prof. Subhashis Banerjee, Prof.
-        Subodh Sharma}
-    \headerrow {\emph{Summer Undergraduate Project}}{\emph{May 2019}}
-
-    \begin{itemize}[noitemsep,nolistsep]
-        \item
-            Constructed first-order logical representation of data
-            privacy, security and other correctness properties.
-        \item
-            Proposed a complete example of a design with unit tests and
-            end-to-end testing of the model.
-        \item
-            Employed blockchain technology similar to \textbf{Hyperledger
-            Fabrics} and \textbf{Software Guard Extension}.
-    \end{itemize}
+%\item[]
+%    \headerrow {\textbf{Public Credit Registry}}{Prof. Subhashis Banerjee, Prof.
+%        Subodh Sharma}
+%    \headerrow {\emph{Summer Undergraduate Project}}{\emph{May 2019 - Jul 2019}}
+%
+%    \begin{itemize*}
+%        \item
+%            Constructed first-order logical representation of data
+%            privacy, security and other correctness properties.
+%        \item
+%            Proposed a complete example of a design with unit tests and
+%            end-to-end testing of the model.
+%        \item
+%            Employed blockchain technology similar to \textbf{Hyperledger
+%            Fabrics} and \textbf{Software Guard Extension}.
+%    \end{itemize*}
 
 \item[]
     \headerrow {\textbf{AI Game-playing bot}}{Prof. Mausam}
     \headerrow {\emph{Artificial Intelligence Project}}{\emph{Oct 2018}}
 
-    \begin{itemize}[noitemsep,nolistsep]
+    \begin{itemize*}
         \item
-            Created a bot to play Yinsh, a $2-$player game on an hexagonal board
+            Created a bot to play Yinsh, a $2$-player game on an hexagonal board
             with a branching factor of $30$.
         \item
-            Used \textbf{Alpha beta pruning} with \textbf{static move ordering}
-            to decide next move from set of all possible moves.
+            Implemented \textbf{Alpha-beta pruning} with \textbf{static move ordering}
+            to choose next move from all possible moves.
         \item
-            Utilized \textbf{Bitboards} and \textbf{Zobrist Hashing} to speed up
-            move generation, thus searching $4$ moves ahead.
-    \end{itemize}
+            Optimized move generation using \textbf{Bitboards} and \textbf{Zobrist Hashing},
+            boosting the search to $4$ moves ahead.
+        \item
+            Fine-tuned weights for explicit hand-crafted features through automated trial-and-error.
+    \end{itemize*}
 
 %\item
 %    Toy prolog interpreter
@@ -140,7 +176,7 @@
 %    \hfill
 %    MAR $2018$
 %
-%    \begin{itemize}[noitemsep,nolistsep]
+%    \begin{itemize}
 %        \item
 %            Built a interpreter for logic programming language - Prolog, capable
 %            of solving prolog predicates.
@@ -155,27 +191,18 @@
 %            was implemented to solve the predicates.
 %    \end{itemize}
 
-\end{list}
-
-\section*{Relevant Coursework}
-\begin{itemize}[noitemsep,nolistsep]
-\item
-    Math: Linear Algebra and Differential Equations, Calculus, Probability and
-        Stochastic Processes
-\item
-    Computer Science: Data Structures and Algorithms, Principles of Artificial Intelligence, Machine Learning
 \end{itemize}
 
-\section*{Technical Skills}
-\begin{itemize}[noitemsep,nolistsep]
-\item
-    Programming Languages: C/C$++$, Python, Bash
-\item
-    Tools/Software: PyTorch, TensorFlow, OpenMP, CUDA
+\section*{\textsc{Relevant Coursework}}
+\begin{itemize}[itemsep=0em, leftmargin=0.7em]
+\item[]
+    \textbf{Mathematics}: Linear Algebra, Calculus, Probability and Stochastic Processes
+\item[]
+    \textbf{Computer Science}: Artificial Intelligence, Machine Learning, Advanced Algorithms
 \end{itemize}
 
 %\section*{Positions of Responsibility}
-%\begin{itemize}[noitemsep,nolistsep]
+%\begin{itemize}
 %    \item
 %        As Vice-Captain, led the hostel chess team to be placed first in
 %        Inter-Hostel Chess Tournament 2017 at IIT.
@@ -184,16 +211,15 @@
 %        intra-high school extracurricular competitions.
 %\end{itemize}
 
-%\section*{Interests, Talents and Skills}
-%\begin{itemize}[noitemsep,nolistsep]
+%\section*{\textsc{Interests, Talents and Skills}}
+%\begin{itemize*}
 %    \item
 %        Chess - FIDE Rating: $1380$
 %    \item
-%        Basketball - Represented the school team and currently hostel team at
-%        IIT Delhi.
+%        Basketball - Represented the school team and hostel team at IIT Delhi.
 %    \item
 %        Competitive programming (uname: recurze) – Ratings: Codeforces - $1813$
 %        and Codechef - $1877$.
-%\end{itemize}
+%\end{itemize*}
 
 \end{document}
