@@ -7,6 +7,13 @@
 
 \sectionfont{\normalfont\sectionrule{0pt}{0pt}{-4pt}{1pt}}
 
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+    #1 &
+    #2 \\
+\end{tabular*}}
+
 \begin{document}
 \begin{center} {\Large \textsc{Rahul Venkatesh}}\end{center}
 
@@ -54,13 +61,11 @@
 \end{itemize}
 
 \section*{Work Experience}
-\begin{enumerate}
-\item
-    Order Entry Gateway
-    $\mid$
-    Squarepoint Capital
-    \hfill
-    AUG 2020 - PRESENT
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+\item[]
+    \headerrow {\textbf{Order Entry Gateway}}{Squarepoint Capital - Paris}
+    \headerrow {\emph{Software Engineering Job}}{\emph{Aug 2020 - Present}}
 
     \begin{itemize}[noitemsep,nolistsep]
         \item
@@ -73,16 +78,15 @@
             \textbf{collecting and analyzing} latency-related \textbf{data}.
     \end{itemize}
 
-\end{enumerate}
+\end{list}
 
 \section*{Projects}
-\begin{enumerate}
-\item
-    Parallel Laplacian Solver
-    $\mid$
-    Prof. Amitabha Bagchi
-    \hfill
-    AUG $2019$
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+\itemsep1em
+\item[]
+    \headerrow {\textbf{Parallel Laplacian Solver}}{Prof. Amitabha Bagchi}
+    \headerrow {\emph{Algorithms Project}}{\emph{Aug 2019}}
 
     \begin{itemize}[noitemsep,nolistsep]
         \item
@@ -96,12 +100,10 @@
             interface for parallelization.
     \end{itemize}
 
-\item
-    Public Credit Registry
-    $\mid$
-    Prof. Subhashis Banerjee, Prof. Subodh Sharma
-    \hfill
-    MAY $2019$
+\item[]
+    \headerrow {\textbf{Public Credit Registry}}{Prof. Subhashis Banerjee, Prof.
+        Subodh Sharma}
+    \headerrow {\emph{Summer Undergraduate Project}}{\emph{May 2019}}
 
     \begin{itemize}[noitemsep,nolistsep]
         \item
@@ -115,12 +117,9 @@
             Fabrics} and \textbf{Software Guard Extension}.
     \end{itemize}
 
-\item
-    AI Game-playing bot
-    $\mid$
-    Prof. Mausam
-    \hfill
-    OCT $2018$
+\item[]
+    \headerrow {\textbf{AI Game-playing bot}}{Prof. Mausam}
+    \headerrow {\emph{Artificial Intelligence Project}}{\emph{Oct 2018}}
 
     \begin{itemize}[noitemsep,nolistsep]
         \item
@@ -156,7 +155,7 @@
 %            was implemented to solve the predicates.
 %    \end{itemize}
 
-\end{enumerate}
+\end{list}
 
 \section*{Relevant Coursework}
 \begin{itemize}[noitemsep,nolistsep]
