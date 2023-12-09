@@ -40,7 +40,8 @@
 
 \begin{document}
 \begin{center}
-    {\huge \textsc{\textbf{Rahul Venkatesh}}} \\[2pt]
+    %{\huge \textsc{\textbf{Rahul Venkatesh}}} \\[2pt]
+    {\huge \textsc{Rahul Venkatesh}} \\[2pt]
     % Paris $\mid$ \phone {+33 7 xx xx xx xx} $\mid$ \email{rahulv.9942@gmail.com}
     \phone{+65 xxxx xxxx}
     $\mid$
@@ -86,7 +87,7 @@
 \item[]
     \textbf{Languages}: C++, Python, SQL, Bash
 \item[]
-    \textbf{Tools/Software}: TensorFlow, OpenMP, CUDA, Git, GDB
+    \textbf{Tools/Software}: TensorFlow, MongoDB, MySQL, OpenMP, CUDA
 \end{itemize}
 
 \section*{\textsc{\textbf{Work Experience}}}
@@ -120,21 +121,53 @@
 \begin{itemize}[leftmargin=0em]
 
 \item[]
-    \headerrow {\textbf{Parallel Laplacian Solver}}{Prof. Amitabha Bagchi}
-    \headerrow {\emph{Algorithms Project}}{\emph{Aug 2019 - Dec 2019}}
+    \headerrow {\textbf{Stock Price Prediction}}{Prof. Nguyen Hung Minh Tan}
+    \headerrow {\emph{Machine Learning Project}}{\emph{Oct 2023 - Nov 2023}}
 
     \begin{itemize*}
         \item
-            Implemented a novel \textbf{random-walk distributed} method to solve an
-            important class of Laplacian systems.
+            Perfomed time series analysis with \textbf{seasonal decomposition} and \textbf{stationarity} test to identify patterns.
         \item
-            Leveraged C++/OpenMP API for parallelization and gprof and valgrind for \textbf{profiling}.
+            Used techniques like \textbf{Moving Average} and \textbf{Exponential Smoothing} to approximate prices and remove noise.
         \item
-            Improved performance on sparse graphs with Alias Method and "densifying" \textbf{optimizations}.
+            Implemented cross-validation and parameter grid search for model selection to reduce bias and overfitting.
         \item
-            Visualized performance against existing Dan Spielman's solver and Bechetti's solver: \\
-            Overall, it's \textbf{better than} Bechetti's, and with ample parameter fine-tuning, it's \textbf{comparable with} Dan's.
+            Applied diverse forecasting methods from \textbf{ARIMA} (and VARMAX) to Recurrent Neural Networks
+            like \textbf{LSTM}.
     \end{itemize*}
+
+
+\item[]
+    \headerrow {\textbf{MiniMovieDB}}{Prof. Xiaoyan Yang}
+    \headerrow {\emph{Database Project}}{\emph{Oct 2023 - Nov 2023}}
+
+    \begin{itemize*}
+        \item
+            Developed a \textbf{MongoDB} database for managing and storing information about shows, actors and user events.
+        \item
+            Designed \textbf{aggregation pipelines} to extract valuable insights, such as identifying popular shows and actors.
+        \item
+            Enhanced query performance by strategic \textbf{indexing} and optimized regex searches for faster data retrieval.
+        \item
+            Implemented \textbf{FastAPI} endpoints to search, filter, and serve data seamlessly to the web frontend.
+    \end{itemize*}
+
+%\item[]
+%    \headerrow {\textbf{Parallel Laplacian Solver}}{Prof. Amitabha Bagchi}
+%    \headerrow {\emph{Algorithms Project}}{\emph{Aug 2019 - Dec 2019}}
+%
+%    \begin{itemize*}
+%        \item
+%            Implemented a novel \textbf{random-walk distributed} method to solve an
+%            important class of Laplacian systems.
+%        \item
+%            Leveraged C++/OpenMP API for parallelization and gprof and valgrind for \textbf{profiling}.
+%        \item
+%            Improved performance on sparse graphs with Alias Method and "densifying" \textbf{optimizations}.
+%        \item
+%            Visualized performance against existing Dan Spielman's solver and Bechetti's solver: \\
+%            Overall, it's \textbf{better than} Bechetti's, and with ample parameter fine-tuning, it's \textbf{comparable with} Dan's.
+%    \end{itemize*}
 
 %\item[]
 %    \headerrow {\textbf{Public Credit Registry}}{Prof. Subhashis Banerjee, Prof.
@@ -153,23 +186,23 @@
 %            Fabrics} and \textbf{Software Guard Extension}.
 %    \end{itemize*}
 
-\item[]
-    \headerrow {\textbf{AI Game-playing bot}}{Prof. Mausam}
-    \headerrow {\emph{Artificial Intelligence Project}}{\emph{Oct 2018}}
-
-    \begin{itemize*}
-        \item
-            Created a bot to play Yinsh, a $2$-player game on a hexagonal board
-            with a branching factor of $30$.
-        \item
-            Applied \textbf{Alpha-beta pruning} with \textbf{static move ordering}
-            to choose next move to evaluate.
-        \item
-            Optimized move generation using \textbf{Bitboards} and \textbf{Zobrist Hashing},
-            boosting search to $4$ moves ahead.
-        \item
-            Fine-tuned weights for explicit hand-crafted features through automated trial-and-error.
-    \end{itemize*}
+%\item[]
+%    \headerrow {\textbf{AI Game-playing bot}}{Prof. Mausam}
+%    \headerrow {\emph{Artificial Intelligence Project}}{\emph{Oct 2018}}
+%
+%    \begin{itemize*}
+%        \item
+%            Created a bot to play Yinsh, a $2$-player game on a hexagonal board
+%            with a branching factor of $30$.
+%        \item
+%            Applied \textbf{Alpha-beta pruning} with \textbf{static move ordering}
+%            to choose next move to evaluate.
+%        \item
+%            Optimized move generation using \textbf{Bitboards} and \textbf{Zobrist Hashing},
+%            boosting search to $4$ moves ahead.
+%        \item
+%            Fine-tuned weights for explicit hand-crafted features through automated trial-and-error.
+%    \end{itemize*}
 
 %\item
 %    Toy prolog interpreter
