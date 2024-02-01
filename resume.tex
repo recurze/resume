@@ -4,14 +4,13 @@
 
 \usepackage{libertine}    % font
 \usepackage[T1]{fontenc}  % for 8-bit encoding
+\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{enumitem}     % for customizing itemize
-\usepackage{fontawesome5} % for contact info logos
 \usepackage{hyperref}     % for link
 \usepackage{mdwlist}      % for compact lists (itemize*)
 
 \usepackage[letterpaper,margin=1in]{geometry}
-
 
 \sectionfont{\normalfont\sectionrule{0pt}{0pt}{-4pt}{1pt}}
 
@@ -22,34 +21,20 @@
     #2 \\
 \end{tabular*}}
 
-\newcommand{\email}[1]{
-    \faEnvelope \space #1
-}
-
-\newcommand{\phone}[1]{
-    \faPhone \space #1
-}
-
-\newcommand{\github}[1]{
-    \href{https://www.github.com/#1}{\faGithub \space #1}
-}
-
-\newcommand{\linkedin}[1]{
-    \href{https://www.linkedin.com/in/#1}{\faLinkedin \space #1}
-}
-
 \begin{document}
+\thispagestyle{empty}
+
 \begin{center}
     %{\huge \textsc{\textbf{Rahul Venkatesh}}} \\[2pt]
     {\huge \textsc{Rahul Venkatesh}} \\[2pt]
-    % Paris $\mid$ \phone {+33 7 xx xx xx xx} $\mid$ \email{rahulv.9942@gmail.com}
-    \phone{+65 xxxx xxxx}
+    % Paris $\mid$ +33 7 xx xx xx xx $\mid$ rahulv.9942@gmail.com
+    +65 xxxx xxxx
     $\mid$
-    \email{rahulv.9942@gmail.com}
+    rahulv.9942@gmail.com
     $\mid$
-    \linkedin{recurze}
+    linkedin.com/in/\href{https://www.linkedin.com/in/recurze}{recurze}
     $\mid$
-    \github{recurze}
+    github.com/\href{https://github.com/recurze}{recurze}
 \end{center}
 
 \section*{\textsc{\textbf{Education}}}
