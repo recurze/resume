@@ -69,13 +69,13 @@
             Built new OEGs to $5+$ \textbf{exchanges}, including \textbf{CME, ICE} and \textbf{OSE}
             over OUCH and FIX protocols.
         \item
-            Designed frameworks for trading $2$ new asset classes:
+            Designed frameworks for trading $2$ asset classes:
             \textbf{bonds} and \textbf{non-deliverable forwards (NDF)}.
-        \item
-            \textbf{Improved performance} of gateway application by
-            \textbf{collecting and analysing} latency-related \textbf{data}.
         %\item
-        %    Coordinated with QA and delivered numerous new projects (gateways) and business requests (features).
+        %    \textbf{Improved performance} of gateway application by
+        %    \textbf{collecting and analysing} latency-related \textbf{data}.
+        %\item
+        %    Coordinated with QA and delivered numerous projects (gateways) and business requests (features).
         %\item
         %    Documented workflows and automations to streamline developing new gateways and production support.
     \end{itemize*}
@@ -85,22 +85,35 @@
 \begin{itemize}[leftmargin=0em]
 
 \item[]
-    \headerrow {\textbf{Option Pricing}}{}
+    \headerrow {\textbf{Sentiment Analysis - Financial tweets}}{\href{https://github.com/recurze/fin_sentiment_analysis}{Source code}}
     \begin{itemize*}
         \item
-            Developed n-step \textbf{Binomial Option Pricing Model} as a discrete version of Black-Scholes model.
+            Preprocessed data by tokenizing, \textbf{stemming/lemmatizing} and vectorizing (\textbf{BoW and TF-IDF}) the text.
         \item
-            Implemented \textbf{Least-Square Policy Iteration} (RL) to learn optimal exercise policy for American options.
+            Employed traditional ML models like Logistic Regression, SVM and \textbf{Naive Bayes} as baseline.
         \item
-            Applied LSTDQ to compute expected payoff upon continuation using Laguerre polynomials as \textbf{feature maps}.
+            Trained \textbf{LSTM} with both untrained and \textbf{pretrained embeddings} as an improvement over baseline.
         \item
-            Computed \textbf{greeks} and conducted sensitivity analysis of option price w.r.t parameters $r, \tau,$ and $\sigma$.
-        \item
-            Applied real data to derive risk-free rate and implied volatility, closely matching computed and market prices.
+            Tuned hyperparameters by randomized search and cross validation for robust and enhanced performance.
     \end{itemize*}
 
 \item[]
-    \headerrow {\textbf{Stock Price Prediction}}{}
+    \headerrow {\textbf{Option Pricing}}{\href{https://github.com/recurze/OptionPricing}{Source code}}
+    \begin{itemize*}
+        %\item
+        %    Developed n-step \textbf{Binomial Option Pricing Model} as a discrete version of Black-Scholes model.
+        \item
+            Implemented \textbf{Least-Square Policy Iteration} (RL) to learn optimal exercise policy for American options.
+        \item
+            Developed \textbf{Monte Carlo}, \textbf{tree models} and \textbf{PDE solvers} to price options like (quanto) European, Asian and DNT.
+        %\item
+        %    Applied LSTDQ to compute expected payoff upon continuation using Laguerre polynomials as \textbf{feature maps}.
+        \item
+            Solved convex optimization problem to build \textbf{arbitrage free smile} interpolator and implied \textbf{volatility surface}.
+    \end{itemize*}
+
+\item[]
+    \headerrow {\textbf{Simple Stock Price Prediction}}{\href{https://github.com/recurze/SixDirScattering_RTESolver}{Source code}}
     \begin{itemize*}
         \item
             Conducted time series analysis with \textbf{seasonal decomposition} and \textbf{stationarity} tests to identify patterns.
@@ -116,7 +129,7 @@
 
 
 \item[]
-    \headerrow {\textbf{Numerical Solution to System of PDEs: Radiative Transfer (RT)}}{}
+    \headerrow {\textbf{Numerical Solution to System of PDEs: Radiative Transfer (RT)}}{\href{http://github.com/recurze/SixDirScattering_RTESolver}{Source code}}
     \begin{itemize*}
         \item
             Solved system of PDEs modelling scattering in RT in 3D space in 6 directions for a range of $\sigma$
@@ -138,22 +151,22 @@
 %            Designed \textbf{aggregation pipelines} to extract valuable insights, such as identifying popular shows and actors.
 %        \item
 %            Enhanced query performance by strategic \textbf{indexing} and optimized regex searches for faster data retrieval.
-%        %\item
-%        %    Implemented \textbf{FastAPI} endpoints to search, filter, and serve data seamlessly to the web frontend.
+%        \item
+%            Implemented \textbf{FastAPI} endpoints to search, filter, and serve data seamlessly to the web frontend.
 %    \end{itemize*}
-
+%
 \end{itemize}
 
-\section*{\textsc{\textbf{Relevant Coursework}}}
-\begin{itemize}[itemsep=0em, leftmargin=0.7em]
-\item[]
-    Probability and Stochastic Processes,
-    Differential Equations,
-    Optimization Algorithms for Data Modelling,
-    Machine Learning,
-    Applied Regression Analysis (In Progress),
-    Modelling and Numerical Simulations (In Progress),
-    Numerical Methods in Quantitative Finance (In Progress)
-\end{itemize}
+%\section*{\textsc{\textbf{Relevant Coursework}}}
+%\begin{itemize}[itemsep=0em, leftmargin=0.7em]
+%\item[]
+%    Probability and Stochastic Processes,
+%    Differential Equations,
+%    Optimization Algorithms for Data Modelling,
+%    Machine Learning,
+%    Applied Regression Analysis (In Progress),
+%    Modelling and Numerical Simulations (In Progress),
+%    Numerical Methods in Quantitative Finance (In Progress)
+%\end{itemize}
 
 \end{document}
